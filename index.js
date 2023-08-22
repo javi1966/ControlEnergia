@@ -384,8 +384,21 @@ const muestraGrafica = () => {
     let fechas = arr.map((a) => a.fecha);
     let totalConsumido =consumos.reduce((accumulator, currentValue) => {
                                                            return accumulator + currentValue
-                                                              },0);
-    document.querySelector('.energia_aux p').innerHTML=`<em>Total: </em> ${totalConsumido.toFixed(1)} Kwh`
+                                                                                                                    },0);
+   
+    
+    if (totalConsumido <=500)                                                         
+       document.querySelector('.energia_aux').classList.add('energia_low')
+    else if(totalConsumido >=500 && totalConsumido <=700)
+      document.querySelector('.energia_aux').classList.add('energia_medio')
+    else
+      document.querySelector('.energia_aux').classList.add('energia_alto')
+    
+       
+
+
+
+    document.querySelector('.energia_aux p').innerHTML=`<em>Total: </em> ${totalConsumido.toFixed(1)} <em>Kwh</em>`
     
     const grafConsumo = new Chart(ctx, {
       type: "bar",
