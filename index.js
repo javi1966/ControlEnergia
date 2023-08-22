@@ -411,12 +411,12 @@ const muestraGrafica = () => {
 
     let colorChangeValue = 50; //set this to whatever is the deciding color change value
     let dataset = grafConsumo.data.datasets[0];
-    for (let i = 0; i < dataset.data.length; i++) {
+    /*for (let i = 0; i < dataset.data.length; i++) {
       if (dataset.data[i] > colorChangeValue) {
         dataset.backgroundColor[i] =' rgba(154, 162, 235, 0.8)'
           
       }
-    }
+    }*/
     grafConsumo.update();
 
   });
