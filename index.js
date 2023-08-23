@@ -386,7 +386,7 @@ const muestraGrafica = () => {
                                                            return accumulator + currentValue
                                                                                                                     },0);
    
-    
+                                                                                                                    
     if (totalConsumido <=500)                                                         
        document.querySelector('.energia_aux').classList.add('energia_low')
     else if(totalConsumido >=500 && totalConsumido <=700)
