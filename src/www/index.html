@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+	<meta name='viewport' content='width=device-width,initial-scale=1.0,user-scalable=no' />
+	<!-- BOOTSTRAP 4                                   -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <!-- Gauges -->
+    <script src="https://cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.7/all/gauge.min.js" crossorigin="anonymous"></script>
+    <!--  Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" crossorigin="anonymous"></script>
+
+	<title>Control Energia ESP32</title>
+
+</head>
+
+<body>
+
+	<nav class='navbar navbar-dark bg-dark mb-4'>
+
+		<h1 class='navbar-brand'>Control Energia</h1>
+
+	</nav>
+
+
+
+	<div class='container-fluid'>
+
+        <div id="idCardThingspeak" class='card bg-dark text-white mb-4 card-shadow'>
+
+			<div class='card-body'>
+				<h5 class='card-title'>Energia Bar</h5>
+
+				<div class='row justify-content-center'>
+
+                    <canvas id="energiaChart"></canvas>    
+				
+				 </div>
+
+                 <div class="energia_aux">
+
+                   <div >
+                    <button id="idResetEnergia" type="button" class="btn btn-primary">Reset Energia</button>
+                   </div>
+
+                   <div>
+                    <p >Total:</p>
+				   </div>
+				    
+				 </div>
+                 
+			</div>
+
+
+		</div>
+
+
+
+		<div id="idCardPotencia" class='card bg-dark text-white mb-4 card-shadow'>
+
+			<div class='card-body'>
+				<h5 class='card-title'>Potencia</h5>
+                <div class='row justify-content-center'>
+					<canvas id="gauge-potencia"></canvas>
+				</div>
+			
+			</div>
+
+
+		</div>
+
+		<div id="idCardCorriente" class='card bg-dark text-white mb-4 card-shadow'>
+
+			<div class='card-body '>
+				<h5 class='card-title'>Corriente</h5>
+                <div class='row justify-content-center'> 
+				  <canvas id="gauge-corriente"></canvas>
+				</div>
+              
+			</div>
+
+
+		</div>
+
+		<div id="idCardTension" class='card bg-dark text-white mb-4 card-shadow'>
+
+			<div class='card-body '>
+				<h5 class='card-title'>Tension</h5>
+                <div class='row justify-content-center'>
+				  <canvas id="gauge-tension"></canvas>
+			    </div>
+			</div>
+
+
+		</div>
+
+		<div id="idCardEnergia" class='card bg-dark text-white mb-4 card-shadow'>
+
+			<div class='card-body '>
+				<h5 class='card-title'>Energia</h5>
+
+				<div class='row justify-content-center'>
+					<canvas id="gauge-energia"></canvas>
+				 </div>
+
+			</div>
+
+
+		</div>
+
+	</div>
+	<!--Fin-->
+
+
+
+	<footer class="bg-dark text-center text-lg-start ">
+
+		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+			<h2>&copy; 2023 Copyright: Javier Espinosa</h2>
+		</div>
+
+	</footer>
+
+	<div id="toast"></div>
+
+</body>
+
+
+<script src="index.js" type="module" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
