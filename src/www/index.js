@@ -297,7 +297,7 @@ setInterval(() => {
 
 const controlEnergia = async () => {
   try {
-    const res = await fetch("http://192.168.1.223/dameEnergia");
+    const res = await fetch("/dameEnergia");
 
     const dato = await res.json();
     console.log("dato: " + dato);
