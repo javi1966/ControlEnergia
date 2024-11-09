@@ -46,6 +46,22 @@ app.get('/dameEnergia' , async(req,res) => {
 });
 
 //**************************************************************************
+app.get('/resetEnergia' , async(req,res) => {
+
+  console.log("Peticion reset Energia");
+
+  let result = await axios("http://192.168.1.223/resetEnergia");
+
+  const { Reset_Energia,Energia_Acumulada } = result.data;
+
+  console.log("Reset Energia: "+Reset_Energia);
+  console.log("Energia Acumulada: "+Energia_Acumulada);
+
+  return res.send(result.data);
+
+
+});
+//**************************************************************************
 
 // Start server
 let server = app.listen(PORT, () => {
